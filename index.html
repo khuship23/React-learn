@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react1</title>
+</head>
+<body>
+    <!-- <div id="root"></div> -->
+    <div id="root1">
+        <h1>khushi </h1>
+        <h1>khushi </h1>
+        <h1>khushi </h1>
+        <h1>khushi </h1>
+    </div>
+    <!-- <script>
+       const heading = document.createElement("h1");
+       heading.innerHTML = "Hello from khushi";
+       const root = document.getElementById("root");
+       root.appendChild(heading);
+//  cdn is a website where react has being hosted and we are just pulling it to our code ...!
+    </script> -->
+
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- <script> 
+      const heading1 = React.createElement("h1", {}, "hello from react");
+      const root1 = ReactDOM.createRoot(document.getElementById("root"));
+      root1.render(heading1);
+
+
+</script> -->
+<script>
+    const parent = React.createElement(
+    "div", 
+    { id : "parent"} , 
+    React.createElement("div", 
+    { id : "child"} ,
+    // React.createElement("h1" , {}, "Hiii I'm h1 tag"
+    [React.createElement("h1" , {}, "Hiii I'm h1 tag"),
+    React.createElement("h2" , {}, "Hiii I'm h2 tag") ]    
+    ) 
+);
+
+    const root1 = ReactDOM.createRoot(document.getElementById("root1"));
+    root1.render(parent);
+    
+</script>
+</script>
+
+<!-- <script src="./app.js"></script> -->
+</body>
+</html>
