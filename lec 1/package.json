@@ -1,9 +1,11 @@
 {
-  "name": "react",
+  "name": "lec-1",
   "version": "1.0.0",
-  "description": "learning react",
-  "main": "app.js",
+  "description": "react ",
+
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
@@ -12,6 +14,15 @@
   "author": "khushi pardeshi",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.12.0"
-  }
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserlist": [
+    "Last 2 version "
+  ]   
+
 }
