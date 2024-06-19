@@ -2,7 +2,6 @@
   "name": "lec-1",
   "version": "1.0.0",
   "description": "react ",
-
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -23,6 +22,5 @@
   },
   "browserlist": [
     "Last 2 version "
-  ]   
-
+  ]
 }
