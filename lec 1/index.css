@@ -54,3 +54,7 @@
     font-size: 14px;
     /* line-height: 1.2; */
 }
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}

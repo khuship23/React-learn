@@ -4,7 +4,12 @@ const Body =() =>{
 
     return(
         <div className="body">
-            <div className="Search">Search</div>
+            <div className="filter">
+                <button className="filter-btn" 
+                onClick={()=>{}}>
+                Top Rate Restaurants
+                </button>
+            </div>
             <div className="res-container">
                 {/* passing props to a functional components  */}
               {
