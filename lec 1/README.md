@@ -13,3 +13,7 @@ VIRTUAL DOM
 
 Diff Algorithm 
 difference between two virtual DOMs
+
+Monolith architecture
+Microservices architecture
+separation of concerns
