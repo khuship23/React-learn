@@ -1,94 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
 import resObj from "../../utils/mockData";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 const Body =() =>{
   let [listOfRestaurants, setListOfRestaurants] =useState(resObj);
-
-  //  let  [listOfRestaurants, setListOfRestaurants] =useState(
-  //   [
-  //   {
-  //         "info": {
-  //           "id": "527591",
-  //           "name": "Wow! Momo",
-  //           "cloudinaryImageId": "64fd45fd9f44c1737bc446e470bed666",
-  //           "costForTwo": "₹300 for two",
-  //           "cuisines": [
-  //             "Tibetan",
-  //             "Healthy Food",
-  //             "Asian",
-  //             "Chinese",
-  //             "Snacks",
-  //             "Continental",
-  //             "Desserts",
-  //             "Beverages"
-  //           ],
-  //           "avgRating": 4.2,
-  //           "sla": {
-  //             "deliveryTime": 36
-  //           }
-  //         }
-  //       }, {"info": {
-  //             "id": "527592",
-  //             "name": " Momo",
-  //             "cloudinaryImageId": "64fd45fd9f44c1737bc446e470bed666",
-  //             "costForTwo": "₹300 for two",
-  //             "cuisines": [
-  //               "Tibetan",
-  //               "Healthy Food",
-  //               "Asian",
-  //               "Chinese",
-  //               "Snacks",
-  //               "Continental",
-  //               "Desserts",
-  //               "Beverages"
-  //             ],
-  //             "avgRating": 3,
-  //             "sla": {
-  //               "deliveryTime": 36
-  //             }}}
-  //  ]);
-
-    // let listOfRestaurants = [{
-    //     "info": {
-    //       "id": "527591",
-    //       "name": "Wow! Momo",
-    //       "cloudinaryImageId": "64fd45fd9f44c1737bc446e470bed666",
-    //       "costForTwo": "₹300 for two",
-    //       "cuisines": [
-    //         "Tibetan",
-    //         "Healthy Food",
-    //         "Asian",
-    //         "Chinese",
-    //         "Snacks",
-    //         "Continental",
-    //         "Desserts",
-    //         "Beverages"
-    //       ],
-    //       "avgRating": 4.2,
-    //       "sla": {
-    //         "deliveryTime": 36
-    //       }
-    //     }
-    //   },  {"info": {
-    //     "id": "527592",
-    //     "name": " Momo",
-    //     "cloudinaryImageId": "64fd45fd9f44c1737bc446e470bed666",
-    //     "costForTwo": "₹300 for two",
-    //     "cuisines": [
-    //       "Tibetan",
-    //       "Healthy Food",
-    //       "Asian",
-    //       "Chinese",
-    //       "Snacks",
-    //       "Continental",
-    //       "Desserts",
-    //       "Beverages"
-    //     ],
-    //     "avgRating": 3,
-    //     "sla": {
-    //       "deliveryTime": 36
-    //     }}
-    //   }];
+ 
+  useEffect(()=>{
+    console.log("useeffect called");
+  }, []); 
 
     return(
         <div className="body">
