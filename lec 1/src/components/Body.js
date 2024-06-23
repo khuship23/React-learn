@@ -1,6 +1,8 @@
 import RestaurantCard from "./RestaurantCard";
 import resObj from "../../utils/mockData";
 import {useEffect, useState} from "react";
+import Shimmer from "./shimmer";
+
 const Body =() =>{
   let [listOfRestaurants, setListOfRestaurants] =useState([]);
  
@@ -19,7 +21,7 @@ console.log(json);
 setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants )
   }
   if (listOfRestaurants.length === 0){
-    return <h1>Loading......</h1>;
+    return <Shimmer/>;
   }
 
     return(
