@@ -70,3 +70,7 @@
     height: 400px;
     background-color:#f0f0f0;
 }
+.login{
+    padding:  0 20px;
+    cursor: pointer;
+}

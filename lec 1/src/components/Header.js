@@ -1,6 +1,7 @@
 import { LOG_URL } from "../../utils/constants";
 
 const Header =() => {
+    let btnName = "login";
     return(
 
         <div className = "header">
@@ -13,6 +14,7 @@ const Header =() => {
                     <li>About Us</li>
                     <li>Contact Us</li>
                     <li>Cart</li>
+                    <button className="login" onClick={() => {btnName ="Logout"}}>{btnName}</button>
                 </ul>
             </div>
         </div>
