@@ -2,6 +2,7 @@ import { LOG_URL } from "../../utils/constants";
 
 const Header =() => {
     let btnName = "login";
+    
     return(
 
         <div className = "header">
