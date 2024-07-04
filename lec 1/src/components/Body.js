@@ -6,6 +6,8 @@ import Shimmer from "./shimmer";
 const Body =() =>{
   let [listOfRestaurants, setListOfRestaurants] =useState([]);
  const [searchText , setSearchTxt] = useState("");
+ const[FilteredListOfRes, setFilteredRes]=useState([]);
+//  whenever state variables updates, react triggers a reconciliation cycle(rerenders the components)
   useEffect(()=>{
     console.log("useeffect called");
     fetchData();
@@ -18,7 +20,8 @@ const Body =() =>{
    
 const json = await data.json();
 console.log(json);
-setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants )
+setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
   //conditional rendering
@@ -30,8 +33,17 @@ setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithSty
         <div className="body">
             <div className="filter">
              <div className="search">
-              <input type="text"className="searchBox" value={searchText}/>
+              <input type="text"className="searchBox" value={searchText}
+              onChange={(e)=>{
+                setSearchTxt(e.target.value);
+              }}/>
               <button onClick={()=>{
+                console.log("list :", listOfRestaurants)
+                console.log(searchText)
+             const filteredRes =listOfRestaurants.filter((info)=>{
+              return info?.info?.name.toLowerCase().includes(searchText.toLowerCase())})
+              console.log(filteredRes)
+              setFilteredRes(filteredRes);
 
               }
             }>Search</button>
@@ -42,8 +54,7 @@ setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithSty
                  const filteredList = listOfRestaurants.filter((info) =>{
                     return info.info.avgRating > 4.3
                   })
-                  console.log(listOfRestaurants);
-                  setListOfRestaurants(filteredList);
+                  setFilteredRes(filteredList);
                 }}>
                 Top Rate Restaurants
                 </button>
@@ -51,7 +62,7 @@ setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithSty
             <div className="res-container">
                 {/* passing props to a functional components  */}
               {
-                listOfRestaurants?.map((info )=> (
+                FilteredListOfRes?.map((info )=> (
                   <RestaurantCard key={info.info.id} resData={info}/>
                   ))
 
