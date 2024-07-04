@@ -1,7 +1,9 @@
 import { LOG_URL } from "../../utils/constants";
+import { useState } from "react";
 
 const Header =() => {
-    let btnName = "login";
+    // let btnName = "login";
+    const [btnNameReact, setBtnNameReact] = useState("Login");
     
     return(
 
@@ -15,7 +17,10 @@ const Header =() => {
                     <li>About Us</li>
                     <li>Contact Us</li>
                     <li>Cart</li>
-                    <button className="login" onClick={() => {btnName ="Logout"}}>{btnName}</button>
+                    <button className="login" onClick={() => {
+                        setBtnNameReact("Logout");
+                        console.log(btnNameReact);
+                        }}>{btnNameReact}</button>
                 </ul>
             </div>
         </div>
