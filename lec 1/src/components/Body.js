@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import Shimmer from "./shimmer";
 
 const Body =() =>{
-  let [listOfRestaurants, setListOfRestaurants] =useState([]);
+  const [listOfRestaurants, setListOfRestaurants] =useState(resObj);
  const [searchText , setSearchTxt] = useState("");
  const[FilteredListOfRes, setFilteredRes]=useState([]);
 //  whenever state variables updates, react triggers a reconciliation cycle(rerenders the components)
@@ -23,6 +23,7 @@ console.log(json);
 setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
+// cors extension is used 
 
   //conditional rendering
   // if (listOfRestaurants.length === 0){
