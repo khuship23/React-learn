@@ -2,6 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";  
 import Body from "./components/Body";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import { createBrowserRouter , RouterProvider} from "react-router-dom";
+import ErrorElement from "./components/ErrorElement";
+
+
 
 
 // conflict derived ui => delhi , bangalore have different ui i.e carousel
@@ -18,9 +24,25 @@ import Body from "./components/Body";
       )
   }
   
-  
+  const appRouter = createBrowserRouter([
+    {
+        path: "/",
+       element: <AppLayout />,
+        errorElement: <ErrorElement/>
+    },
+    {
+        path: "/about",
+        element: <About/>
+    },
+    {
+      path: "/Contact",
+      element: <Contact/>
+    }
+  ])
   
   const root = ReactDOM.createRoot(document.getElementById("root"));
   
   
-  root.render(<AppLayout />);
+//   root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter} />);
+  

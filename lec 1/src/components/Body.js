@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import Shimmer from "./shimmer";
 
 const Body =() =>{
-  const [listOfRestaurants, setListOfRestaurants] =useState(resObj);
+ const [listOfRestaurants, setListOfRestaurants] =useState(resObj);
  const [searchText , setSearchTxt] = useState("");
  const[FilteredListOfRes, setFilteredRes]=useState([]);
 //  whenever state variables updates, react triggers a reconciliation cycle(rerenders the components)
