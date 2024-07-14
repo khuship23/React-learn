@@ -19,3 +19,7 @@ Microservices architecture
 separation of concerns
 
 react router dom library
+
+## 2 types of Routing in web apps
+- client side routing 
+- server side routing
