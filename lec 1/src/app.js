@@ -6,6 +6,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import { createBrowserRouter , RouterProvider, Outlet} from "react-router-dom";
 import ErrorElement from "./components/ErrorElement";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 
 
@@ -41,6 +42,10 @@ import ErrorElement from "./components/ErrorElement";
           path: "/Contact",
           element: <Contact />,
         },
+        {
+          path: "/restaurants/:resid",
+          element: <RestaurantMenu/>
+        }
       ],
       errorElement: <ErrorElement />,
     },
