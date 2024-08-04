@@ -43,7 +43,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
           element: <Contact />,
         },
         {
-          path: "/restaurants/:resid",
+          path: "/restaurants/:resId",
           element: <RestaurantMenu/>
         }
       ],

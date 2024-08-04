@@ -19,10 +19,12 @@ Microservices architecture
 separation of concerns
 
 react router dom library
+useParams =>hook
+
 
 ## 2 types of Routing in web apps
 - client side routing 
 - server side routing
 
 Dynamic routing
-2.0.00
+
