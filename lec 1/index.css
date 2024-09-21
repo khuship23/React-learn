@@ -31,7 +31,7 @@
   height: 350px;
   /* background-color: #f0f0f0; */
   /* background-color: #007bff; */
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   border: 1px solid #ccc;
   color: rgb(153, 29, 202);
   display: inline-block;
@@ -94,7 +94,13 @@
   text-transform: uppercase;
 }
 
-.menu{
+.myuser{
+ 
+ padding: 2px;
+  border: 1px solid black;
+}
+
+.menu {
   color: rgb(18, 163, 37);
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;

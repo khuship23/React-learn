@@ -28,3 +28,13 @@ useParams =>hook
 
 Dynamic routing
 
+class based component render method
+class by React.Component
+ constructor(props) {
+        super(props); 
+    } 
+    this.props.name is used
+
+
+
+epi 8 - 25.53
